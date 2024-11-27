@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 export default function Page() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello world!</Text>
+      <Text style={styles.title}>Settings</Text>
 
       <Link href={"/profile"}>Ir para profile</Link>
 

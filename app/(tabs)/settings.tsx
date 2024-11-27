@@ -1,9 +1,16 @@
+import { Link } from "expo-router";
 import { View, Text, StyleSheet } from "react-native";
 
-export default function Tab() {
+export default function Page() {
   return (
     <View style={styles.container}>
-      <Text>Tab [Home|Settings]</Text>
+      <Text style={styles.title}>Hello world!</Text>
+
+      <Link href={"/profile"}>Ir para profile</Link>
+
+      <Link href={{ pathname: "./product/[id]", params: { id: "2" } }}>
+        Ver Produto
+      </Link>
     </View>
   );
 }
@@ -11,7 +18,14 @@ export default function Tab() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
+    justifyContent: "center",
+    gap: 6,
+  },
+
+  title: {
+    fontSize: 64,
+    fontWeight: "bold",
+    color: "#000",
   },
 });

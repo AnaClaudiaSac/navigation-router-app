@@ -1,16 +1,16 @@
-import { Link } from "expo-router";
 import { View, Text, StyleSheet } from "react-native";
+import { router, useGlobalSearchParams } from "expo-router";
 
-export default function Page() {
+export default function Produto() {
+  const params = useGlobalSearchParams();
+  console.log(params.id);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello world!</Text>
+      <Text style={styles.title}>Produto</Text>
+      <Text style={styles.title}>{params.id}</Text>
 
-      <Link href={"/profile"}>Ir para profile</Link>
-
-      <Link href={{ pathname: "./product/[id]", params: { id: "2" } }}>
-        Ver Produto
-      </Link>
+      <Text onPress={() => router.back()}>Voltar para o Index</Text>
     </View>
   );
 }

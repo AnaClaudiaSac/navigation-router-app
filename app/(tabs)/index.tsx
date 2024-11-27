@@ -5,7 +5,7 @@ import { router } from "expo-router";
 export default function Page() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Profile</Text>
+      <Text style={styles.title}>Home</Text>
       <Text onPress={() => router.back()}>Voltar para o Index</Text>
     </View>
   );
